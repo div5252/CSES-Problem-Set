@@ -28,7 +28,7 @@ ll POW(ll a,ll b)
     if(b%2==0) return (temp*temp)%MOD;
     else return (((temp*temp)%MOD)*a)%MOD;
 }
-
+ 
 int main()
 {
     ios::sync_with_stdio(0);
@@ -36,12 +36,12 @@ int main()
     cout.tie(0);
     ll n,x;
     cin>>n>>x;
-    ll c[n+1];
+    vector<int> c(n+1);
     for(int i=1;i<=n;i++)
     {
         cin>>c[i];
     }
-    ll dp[n+1][x+1]={};
+    vector<vector<int> > dp(n+1, vector<int> (x+1,0));
     dp[0][0]=1;
     for(int i=1;i<=n;i++)
     {
